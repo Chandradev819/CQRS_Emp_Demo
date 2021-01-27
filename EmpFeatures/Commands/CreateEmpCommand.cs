@@ -1,15 +1,12 @@
 ﻿using CQRS_Emp_Demo.Context;
 using CQRS_Emp_Demo.Model;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CQRS_Emp_Demo
 {
-    public class CreateEmpCommand: IRequest<int>
+    public class CreateEmpCommand : IRequest<int>
     {
         public int Id { get; set; }
         public string EmpName { get; set; }
