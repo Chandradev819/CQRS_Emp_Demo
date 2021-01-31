@@ -2,21 +2,19 @@
 using CQRS_Emp_Demo.Model;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CQRS_Emp_Demo
 {
-    public class GetEmpByIdQuery:IRequest<Emp>
+    public class GetEmpByIdQuery : IRequest<Emp>
     {
         public int Id { get; set; }
         public class GetEmpByIdQueryHandler : IRequestHandler<GetEmpByIdQuery, Emp>
         {
             private readonly IApplicationContext _context;
-            public GetEmpByIdQueryHandler(IApplicationContext context) 
+            public GetEmpByIdQueryHandler(IApplicationContext context)
             {
                 _context = context;
             }
